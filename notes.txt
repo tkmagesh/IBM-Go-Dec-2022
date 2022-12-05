@@ -99,7 +99,7 @@ Data Types
     byte (alias for uint8)
     rune (alias for int32) (unicode code point)
 
-Veriables
+Variables
     Function Scope
         Can use :=
         Cannot have unused variables
@@ -108,3 +108,9 @@ Veriables
     Package Scope
         Cannot use :=
         Can have unused variables
+
+Constructs
+    if else
+    switch case
+    for
+
