@@ -103,6 +103,7 @@ Veriables
     Function Scope
         Can use :=
         Cannot have unused variables
+        Unused "constants" are allowed
 
     Package Scope
         Cannot use :=
