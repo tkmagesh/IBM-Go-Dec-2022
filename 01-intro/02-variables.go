@@ -116,8 +116,15 @@ func main() {
 		fmt.Println(str, result)
 	*/
 
-	x, y, str := 100, 200, "Sum of 100 and 200 is"
+	/*
+		x, y, str := 100, 200, "Sum of 100 and 200 is"
+		result := x + y
+		fmt.Println(str, result)
+	*/
+
+	//using the formatting verbs with Printf function
+	x, y, str := 100, 200, "Sum of %d and %d is %d\n"
 	result := x + y
-	fmt.Println(str, result)
+	fmt.Printf(str, x, y, result)
 
 }
