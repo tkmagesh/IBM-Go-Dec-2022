@@ -114,3 +114,6 @@ Constructs
     switch case
     for
 
+Functions
+    * Variadic functions
+    
