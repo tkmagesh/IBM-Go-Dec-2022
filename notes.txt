@@ -1,0 +1,69 @@
+Magesh Kuppan
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hour)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM
+
+Methodology:
+    * No powerpoints
+    * 100% hands-on
+    * Assignments must be attempted
+
+Github Repo:
+    https://github.com/tkmagesh/ibm-go-dec-2022
+
+Software Requirements:
+    * Go tools (https://go.dev/dl)    
+    * Visual Studio Code (https://code.VisualStudio.com/download)
+    * Go extension for Visual Studio Code (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
+
+Why Golang?
+    * Performance
+        Equivalent to C++ without the hassles of manual memory management
+        Close to hardware (No VMs)
+        Tool support for cross compilation
+    * Simplicity
+        Only 25 keywords
+        - No access modifiers (No public, private, protected etc)
+        - No classes (only structs)
+        - No inheritance (only composition)
+        - No exceptions (only errors)
+        - No "try catch finally" construct
+        - No reference types (everything is a value in golang)
+        - No pointer arithmetic (Pointers are supported)
+        - No implicit type conversions
+        - No manual memory management (builtin GC)
+    * Concurrency
+        - Goroutines
+        - Goroutines are cheap(4 kb) whereas OS thread(2 MB)
+        - Builtin Scheduler
+        - Concurrency features are built in the language
+            ex: go keyword, channel data type, channel operator ( <- ), range & select case constructs
+        - APIs for concurrency in the standard library
+            sync package
+            sync/atomic package
+            
+Go Standard Library Documentation
+    https://pkg.go.dev/std
+
+To run a go program
+    go run <file_name.go>
+
+To create a build
+    go build <file_name.go>
+    go build -o <build_name> <file_name.go>
+
+to cross compile an application / program
+
+To list the environment variables
+    go env
+
+To get the list of support OS & processor architecture
+    go tool dist list
+    
+To cross compile 
+    GOOS=windows GOARCH=386 go build 01-hello-world.go
