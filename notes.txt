@@ -121,3 +121,10 @@ Functions
         - Assign functions as values to variables
         - Pass functions as arguments
         - Return functions as return results
+
+Errors
+    Are not exceptions
+    Values that are retured
+    Create:
+        errors.New()
+        fmt.Errorf()
