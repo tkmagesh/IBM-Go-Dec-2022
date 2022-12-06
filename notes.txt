@@ -130,3 +130,7 @@ Errors
         fmt.Errorf()
 
 Deferred Functions
+
+Panic & Recovery
+    Panic
+        When an application state does not allow it to further proceed its execution a panic is raised
