@@ -1,8 +1,13 @@
 /* advent of code - 2022 (day-1, problem-1) */
+/*
+problem - 2
+Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
+*/
 package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -2260,12 +2265,19 @@ var input = `7844
 */
 func main() {
 	calories := strings.Split(input, "\n")
-	fmt.Println(calories)
+	var maxCalories, sumCalories int
+
 	for _, cal := range calories {
 		if cal == "" {
-			fmt.Println("*************")
+			if sumCalories > maxCalories {
+				maxCalories = sumCalories
+			}
+			sumCalories = 0
 			continue
 		}
-		fmt.Println(cal)
+		if val, err := strconv.Atoi(cal); err == nil {
+			sumCalories += val
+		}
 	}
+	fmt.Println(maxCalories)
 }
