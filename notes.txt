@@ -128,3 +128,5 @@ Errors
     Create:
         errors.New()
         fmt.Errorf()
+
+Deferred Functions
