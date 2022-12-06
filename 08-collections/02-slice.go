@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var nos []int
@@ -35,4 +37,15 @@ func main() {
 	fmt.Println("nos[2:6] =", nos[2:6])
 	fmt.Println("nos[:6] =", nos[:6])
 	fmt.Println("nos[6:] =", nos[6:])
+
+	// subList := nos[2:5] //creates a pointer to the underlying array
+	// To create a copy, use the copy function
+	subList := make([]int, 3)
+	copy(subList, nos[2:5])
+	fmt.Println("nos", nos)
+	fmt.Println("subList", subList)
+	subList[0] = 999
+	fmt.Println("After modifying subList")
+	fmt.Println("nos", nos)
+	fmt.Println("subList", subList)
 }
