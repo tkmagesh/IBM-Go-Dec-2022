@@ -30,13 +30,10 @@ func main() {
 }
 
 func logOperation(x, y int, operation func(int, int)) {
-	log.Printf("Operation started - %s(%d, %d)\n", GetFunctionName(operation), x, y)
+	fnName := runtime.FuncForPC(reflect.ValueOf(operation).Pointer()).Name()
+	log.Printf("Operation started - %s(%d, %d)\n", fnName, x, y)
 	operation(x, y)
 	log.Println("Operation completed")
-}
-
-func GetFunctionName(i interface{}) string {
-	return runtime.FuncForPC(reflect.ValueOf(i).Pointer()).Name()
 }
 
 /*
