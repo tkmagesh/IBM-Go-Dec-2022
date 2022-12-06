@@ -145,3 +145,59 @@ Collections
 
     Map
         Typed Key/Value collection
+
+Module
+    Any code that need to be versioned together & deployed together
+
+    Package 
+        internal organization of the code for better maintainability
+
+    Before Go 1.13
+        $GOPATH
+            /bin (3rd party binaries)
+            /pkg (3rd party package source code)
+            /src
+                /github.com
+                    /tkmagesh
+                        /go-app
+                            import "github.com/tkmagesh/utils"
+                        /utils
+
+    Go 1.13
+        Modules were introduced
+        go.mod => module file
+            Name of the module 
+            Min Go version
+            References to other 3rd party packages used in the application
+
+        to create a module
+            go mod init <module_name>
+
+        to execute a module
+            go run .
+
+        to create a build
+            go build . 
+
+        to install 3rd party package
+            go get github.com/fatih/color
+
+        to update the go.mod file
+            go mod tidy
+
+        to localize the dependencies
+            go mod vendor
+
+        to verify if the downloaded code is modified
+            go mod verify
+
+        to remove a specific dependency
+            go get github.com/fatih/color@none
+
+        to get the complete dependency graph
+            go mod graph
+
+        to get the dependency graph of one package
+            go mod why github.com/mattn/go-colorable
+
+        Reference : https://go.dev/doc/modules/managing-dependencies
