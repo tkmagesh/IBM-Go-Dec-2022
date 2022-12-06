@@ -134,3 +134,14 @@ Deferred Functions
 Panic & Recovery
     Panic
         When an application state does not allow it to further proceed its execution a panic is raised
+
+
+Collections
+    Array
+        Fixed size collection of data of the same type
+
+    Slice
+        Varying size collection of the data of the same type
+
+    Map
+        Typed Key/Value collection
