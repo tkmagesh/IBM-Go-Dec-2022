@@ -50,4 +50,11 @@ func main() {
 	delete(productRanks, keyToDelete)
 	fmt.Println("After deleting ", keyToDelete)
 	fmt.Println(productRanks)
+
+	addProductRank("stapler", 10, productRanks)
+	fmt.Println(productRanks)
+}
+
+func addProductRank(product string, rank int, productRanks map[string]int) {
+	productRanks[product] = rank
 }
