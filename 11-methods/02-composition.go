@@ -18,6 +18,10 @@ func (p Product) Format() string {
 	return fmt.Sprintf("Id = %d, Name = %q, Cost = %.2f", p.Id, p.Name, p.Cost)
 }
 
+func (p *Product) ApplyDiscount(discount float32) {
+	p.Cost = p.Cost * ((100 - discount) / 100)
+}
+
 type PerishableProduct struct {
 	Product
 	Expiry string
@@ -48,5 +52,8 @@ func main() {
 	fmt.Println(pen.Format())
 
 	grapes := NewPerishableProduct(101, "Grapes", 50, "2 Days")
+	fmt.Println(grapes.Format())
+	fmt.Println("After applying 10% discount")
+	grapes.ApplyDiscount(10)
 	fmt.Println(grapes.Format())
 }
