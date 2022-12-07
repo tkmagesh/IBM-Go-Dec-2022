@@ -11,7 +11,7 @@ type Employee struct {
 	Id     int
 	Name   string
 	Salary float32
-	Org    Organization
+	Org    *Organization
 }
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 		Id:     100,
 		Name:   "Magesh",
 		Salary: 10000,
-		Org:    ibmLabs,
+		Org:    &ibmLabs,
 	}
 	fmt.Printf("e1 :=> %+v\n", e1)
 
@@ -31,7 +31,7 @@ func main() {
 		Id:     100,
 		Name:   "Magesh",
 		Salary: 10000,
-		Org:    ibmLabs,
+		Org:    &ibmLabs,
 	}
 	fmt.Printf("e2 :=> %+v\n", e2)
 
