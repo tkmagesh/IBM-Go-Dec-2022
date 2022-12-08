@@ -201,3 +201,9 @@ Module
             go mod why github.com/mattn/go-colorable
 
         Reference : https://go.dev/doc/modules/managing-dependencies
+
+Concurrency
+    Ability to have more than one execution path 
+
+    Cooperative Multitasking
+    Preemptive Multitasking
