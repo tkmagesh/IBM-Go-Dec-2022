@@ -228,3 +228,36 @@ Concurrency
                 A RECEIVE operation is blocked until a SEND operation is successful
 
             A SEND operation is blocked until a RECEIVE operation is initiated (NON buffered channel)
+
+
+IO
+    io package
+        Reader interface
+        Writer interface
+        Closer interface
+        Seeker interface
+
+    os package
+        APIs for file manipulation
+            creating, opening & deleting files
+
+    ioutil package
+        High level APIS for reading & writing files
+
+    bufio package
+        APIs for buffered reading & writing data
+        ex: reading data line by line etc
+
+    JSON data
+        encoding/json package
+            serialize and deserialize json data
+
+        Encoder (serialize)
+            encoder := json.NewEncoder(w io.writer)
+            encoder.encode(data)
+
+        Decoder (deserialize)
+            decoder := json.NewDecoder(r io.Reader)
+            decoder.decode(&data)
+
+            
