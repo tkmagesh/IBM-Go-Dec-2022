@@ -225,5 +225,6 @@ Concurrency
 
         Behaviors:
             A RECEIVE operation is ALWAYS a blocking operation
+                A RECEIVE operation is blocked until a SEND operation is successful
 
             A SEND operation is blocked until a RECEIVE operation is initiated (conditions apply)
