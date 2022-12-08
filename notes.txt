@@ -207,3 +207,7 @@ Concurrency
 
     Cooperative Multitasking
     Preemptive Multitasking
+
+    To detect data races
+        go run --race <program.go>
+        go build --race <program.go>
