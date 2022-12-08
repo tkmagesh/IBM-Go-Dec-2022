@@ -211,3 +211,19 @@ Concurrency
     To detect data races
         go run --race <program.go>
         go build --race <program.go>
+
+    channel
+        data type designed to enable communication between goroutines
+        Declaration:
+            var ch chan int
+        Initialisation
+            ch = make(chan int)
+        SEND operation
+            ch <- 100
+        RECEIVE operation
+            result = <- ch
+
+        Behaviors:
+            A RECEIVE operation is ALWAYS a blocking operation
+
+            A SEND operation is blocked until a RECEIVE operation is initiated (conditions apply)
